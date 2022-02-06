@@ -70,6 +70,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 let cors = require('cors');
+const port = process.env.PORT || 5000;
 
 require('dotenv/config');
 
@@ -84,4 +85,4 @@ mongoose.connect(process.env.DB_CONNECTION, () => {
     console.log("connected to db");
 })
 
-app.listen(80);
+app.listen(port);
