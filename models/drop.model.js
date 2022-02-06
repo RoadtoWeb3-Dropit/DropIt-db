@@ -25,11 +25,25 @@ const dropSchema = new Schema(
     dropStatus: {
       type: Boolean,
       required: true
-    },
+    },  
     id: {
       type: String,
       unique: true,
       required: true
+    },
+    metadata: {
+      name: {
+        type: String,
+        required: true
+      },
+      desc: {
+        type: String,
+        required: true
+      },
+      imgLink: {
+        type: String,
+        required: true
+      }
     }
   },
   {

@@ -19,7 +19,7 @@ router.get("/:organizer", (req, res) => {
     .then((d) => res.json(d))
     .catch((err) => res.status(400).json("Error: " + err));
  });
-
+ 
 
 // create new drop
 router.post("/", (req, res) => {
