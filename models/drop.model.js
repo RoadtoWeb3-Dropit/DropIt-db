@@ -16,35 +16,47 @@ const dropSchema = new Schema(
   {
     organizerWallet: {
       type: String,
-      required: true
+      required: true,
     },
     registeredWallets: {
       type: [String],
-      required: true
+      required: true,
     },
     dropStatus: {
       type: Boolean,
-      required: true
-    },  
+      required: true,
+    },
+    dropName: {
+      type: String,
+      required: true,
+    },
+    dropDescription: {
+      type: String,
+      required: true,
+    },
     id: {
       type: String,
       unique: true,
-      required: true
+      required: true,
+    },
+    dropType: {
+      type: String,
+      required: true,
     },
     metadata: {
       name: {
         type: String,
-        required: true
+        required: true,
       },
       desc: {
         type: String,
-        required: true
+        required: true,
       },
       imgLink: {
         type: String,
-        required: true
-      }
-    }
+        required: true,
+      },
+    },
   },
   {
     timestamps: true,
@@ -53,6 +65,6 @@ const dropSchema = new Schema(
 
 const Drop = mongoose.model("Drop", dropSchema);
 module.exports = Drop;
-// get drops by creator 
+// get drops by creator
 // get all drops
-// add drop 
+// add drop
